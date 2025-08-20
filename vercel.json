@@ -1,17 +1,9 @@
 {
   "builds": [
-    {
-      "src": "qotd/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }   
-    },
-    {
-      "src": "backend/main.py",
-      "use": "@vercel/python"
-    }
+    { "src": "qotd/package.json", "use": "@vercel/static-build" },
+    { "src": "backend/main.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "^/api/(.*)$", "dest": "backend/main.py" },
-    { "src": "/(.*)", "dest": "qotd/dist/$1" }
+    { "src": "^/api/(.*)$", "dest": "backend/main.py" }
   ]
 }
