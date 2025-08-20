@@ -1,0 +1,21 @@
+/* src/index.css */
+/* Load fonts FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep global tweaks inside Tailwind layers so they play nice */
+@layer base {
+  html, body, #root { height: 100%; }
+
+  /* Set clean, light theme defaults */
+  body {
+    @apply font-sans text-slate-800 bg-gradient-to-b from-slate-50 to-white antialiased;
+  }
+
+  /* Remove default margins browsers add to blockquote */
+  blockquote { @apply m-0; }
+}

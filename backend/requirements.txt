@@ -1,0 +1,4 @@
+fastapi
+upstash-redis
+aiohttp
+python-dotenv
