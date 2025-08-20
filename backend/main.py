@@ -26,13 +26,14 @@ if not UPSTASH_URL or not UPSTASH_TOKEN:
 
 # -------------------- App & Redis --------------------
 app = FastAPI()
+origins = os.getenv("CORS_ALLOW_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_ALLOWED,
+    allow_origins=origins,        # e.g. ["https://your-frontend.vercel.app"]
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 redis = UpstashRedis(url=UPSTASH_URL, token=UPSTASH_TOKEN)
 
 def rkey(date_str: str) -> str:
