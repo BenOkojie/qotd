@@ -2,4 +2,4 @@ fastapi
 upstash-redis
 aiohttp
 python-dotenv
-uvicorn
+uvicornuvicorn
