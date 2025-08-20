@@ -1,9 +1,0 @@
-{
-  "builds": [
-    { "src": "qotd/package.json", "use": "@vercel/static-build" },
-    { "src": "backend/main.py", "use": "@vercel/python" }
-  ],
-  "routes": [
-    { "src": "^/api/(.*)$", "dest": "backend/main.py" }
-  ]
-}
