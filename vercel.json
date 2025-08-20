@@ -3,7 +3,7 @@
     {
       "src": "qotd/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "qotd/dist" }
+      "config": { "distDir": "dist" }   
     },
     {
       "src": "backend/main.py",
@@ -15,4 +15,3 @@
     { "src": "/(.*)", "dest": "qotd/dist/$1" }
   ]
 }
-
